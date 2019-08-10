@@ -6,75 +6,51 @@ using System.Threading.Tasks;
 
 namespace Zhivko_Servis
 {
+
     partial class Program
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Dobredojdovte vo servisot na Zhivko ! Posluzete se so naseto meni za poveke informacii !! ");
-            //int brojac = 1;
 
-            //while (brojac == 1)
-            //{
-            //    Console.WriteLine("1) Vnes na vozilo");
-            //    Console.WriteLine("2) Pregled na veke vneseno vozilo");
-            //    Console.WriteLine("3) Izlez");
+       //TipNaGorivo
+       //KapacitetNaRezervoar 
+       //PotrosuvackaNa100 
+       //Cena 
+       //Boja 
+       //GodinaNaProizvodstvo
+       //Problem 
+       var car  = new KopnenoVozilo();
 
+        List<Vozilo> vozenPark = new List<Vozilo>()
+            {
+                 new AvtomobilObicen("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new AvtomobilSportski("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Kamion("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new KopnenoVozilo("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Patnicko("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new PatnickoKombe("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Sedan("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Tovarno("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new TovarnoKombe("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new PomorskoVozilo("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Jahta("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new VozduhoplovnoVozilo("", 0 , 0 , 0 , "" , 1990 , " " ),
+                 new Avion("", 0 , 0 , 0 , "" , 1990 , " " ),
+            };
 
-            //    string priem = Console.ReadLine();
-            //    int priemKonv = 0;
-
-
-
-            //    KonvertNaBroj(priem, priemKonv);
-            //    if (KonvertNaBroj(priem, priemKonv) == 1)
-            //    {
-
-            //        Console.Clear();
-            //        Console.WriteLine("Tip na Vozilo ");
-            //        Console.WriteLine("1) Kopneno");
-            //        Console.WriteLine("2) Vodeno");
-            //        Console.WriteLine("3) Vozdusno");
-
-
-            //        string tipNaVozilo = Console.ReadLine();
-            //        if(KonvertNaBroj(tipNaVozilo, priemKonv) == 1)
-            //        {
-            //            Console.Clear();
-            //            Console.WriteLine("Kakvo e Kopnenoto Vozilo? ");
-            //            Console.WriteLine("1) Patnicko");
-            //            Console.WriteLine("2) Tovarno");
-
-            //            string kopnenoVozilo = Console.ReadLine();
-
-
-            //            if (KonvertNaBroj(kopnenoVozilo, priemKonv) == 1)
-            //            {
-
-            //                Console.Clear();
-            //                Console.WriteLine("Kakvo e Kopnenoto Patnicko Vozilo? ");
-            //                Console.WriteLine("1) Avtomobil Obicen");
-            //                Console.WriteLine("2  Avtomobil Sportski");
-            //                Console.WriteLine("")
-
-
-            //            }
-
-
+            foreach (var item in vozenPark)
+            {
+                Console.WriteLine(item.KapacitetNaRezervoar);
+                item.IspecatiSpecificniKarakteristiki();
+            }
+            Console.Read();
         }
-        int KonvertNaBroj(string priem1, int priemKonv1)
+
+        public static int KonvertNaBroj(string priem1)
         {
-
-            int.TryParse(priem1, out priemKonv1);
-            return priemKonv1;
-
+            if(int.TryParse(priem1, out int priemKonv1))
+                return priemKonv1;
+            return 0;
         }
-    }
-    class KopnenoVozilo
-    {
-        public string Patnicko { get; set; }
-        public string Tovarno { get; set; }
-
-
-
     }
 }

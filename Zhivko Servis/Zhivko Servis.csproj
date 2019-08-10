@@ -43,16 +43,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AvtomobilObicen.cs" />
-    <Compile Include="Patnicko.cs" />
-    <Compile Include="PatnickoKombe .cs" />
+    <Compile Include="KopneniVozila\AvtomobilObicen.cs" />
+    <Compile Include="KopneniVozila\KopnenoVozilo.cs" />
+    <Compile Include="KopneniVozila\Patnicko.cs" />
+    <Compile Include="KopneniVozila\PatnickoKombe .cs" />
+    <Compile Include="PomorskiVozila\PomorskoVozilo.cs" />
+    <Compile Include="PomorskiVozila\Jahta.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AvtomobilSportski.cs" />
-    <Compile Include="Sedan.cs" />
-    <Compile Include="TovarnoKombe .cs" />
-    <Compile Include="Kamion.cs" />
-    <Compile Include="Tovarno.cs" />
+    <Compile Include="KopneniVozila\AvtomobilSportski.cs" />
+    <Compile Include="KopneniVozila\Sedan.cs" />
+    <Compile Include="KopneniVozila\TovarnoKombe .cs" />
+    <Compile Include="KopneniVozila\Kamion.cs" />
+    <Compile Include="KopneniVozila\Tovarno.cs" />
+    <Compile Include="VozduhoplovniLetala\Avion.cs" />
+    <Compile Include="VozduhoplovniLetala\VozduhoplovnoVozilo.cs" />
+    <Compile Include="Vozilo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
