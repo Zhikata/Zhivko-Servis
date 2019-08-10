@@ -43,6 +43,10 @@ namespace Zhivko_Servis
                 Console.WriteLine(item.KapacitetNaRezervoar);
                 item.IspecatiSpecificniKarakteristiki();
             }
+            foreach (var item in vozenPark)
+            {
+               // Da se ispecati Vkupniot kapacitet na rezervoarot za gorivo na site vozila
+            }
             Console.Read();
         }
 
