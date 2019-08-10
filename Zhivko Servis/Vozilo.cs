@@ -60,7 +60,7 @@ namespace Zhivko_Servis
 
         public void IspecatiSpecificniKarakteristiki()
         {
-
+            Console.Write($"Specificni karakteristiki na voziloto se : {Boja} {Cena} {GodinaNaProizvodstvo} ");
         }
     }
 }
