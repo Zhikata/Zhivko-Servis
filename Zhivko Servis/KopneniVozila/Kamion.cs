@@ -27,6 +27,16 @@
             base(tipNaGorivo, kapacitetNaRezervoar, potrosuvackaNa100, cena, boja, godinaNaProizvodstvo, problem)
         {
         }
+        public Kamion(int nosivost, string tipNaGorivo,
+                              int kapacitetNaRezervoar,
+                              int potrosuvackaNa100,
+                              int cena,
+                              string boja,
+                              int godinaNaProizvodstvo,
+                              string problem) :
+          base(tipNaGorivo, kapacitetNaRezervoar, potrosuvackaNa100, cena, boja, godinaNaProizvodstvo, problem)
+        {
+        }
 
         public new int MomentalnaVrednost(int cena, int godinaNaProizvodstvo, int potrosuvacka)
             {

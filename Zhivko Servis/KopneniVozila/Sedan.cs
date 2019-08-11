@@ -2,6 +2,8 @@
 {
     public class Sedan : KopnenoVozilo
     {
+        public int EmisijaNaGasovi { get; }
+        private int _emisijaNaGasovi;
 
         public Sedan() : base()
         {
@@ -23,6 +25,17 @@
                                 int godinaNaProizvodstvo,
                                 string problem) :
             base(tipNaGorivo, kapacitetNaRezervoar, potrosuvackaNa100, cena, boja, godinaNaProizvodstvo, problem)
+        {
+        }
+
+        public AvtomobilObicen(int EmisijaNaGasovi,
+                               string tipNaGorivo,
+                               int kapacitetNaRezervoar,
+                               int potrosuvackaNa100,
+                               int cena,
+                               string boja,
+                               int godinaNaProizvodstvo,
+                               string problem)
         {
         }
 

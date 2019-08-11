@@ -2,9 +2,10 @@
 {
         public class PatnickoKombe : KopnenoVozilo
     {
-       
-     
-            public PatnickoKombe() : base()
+
+        public int Nosivost { get; set; }
+
+        public PatnickoKombe() : base()
             {
 
             }
@@ -26,8 +27,18 @@
                 base(tipNaGorivo, kapacitetNaRezervoar, potrosuvackaNa100, cena, boja, godinaNaProizvodstvo, problem)
             {
             }
+        public PatnickoKombe(int Nosivost, string tipNaGorivo,
+                                  int kapacitetNaRezervoar,
+                                  int potrosuvackaNa100,
+                                  int cena,
+                                  string boja,
+                                  int godinaNaProizvodstvo,
+                                  string problem) :
+              base(tipNaGorivo, kapacitetNaRezervoar, potrosuvackaNa100, cena, boja, godinaNaProizvodstvo, problem)
+        {
+        }
 
-            public new int MomentalnaVrednost(int cena, int godinaNaProizvodstvo, int potrosuvacka)
+        public new int MomentalnaVrednost(int cena, int godinaNaProizvodstvo, int potrosuvacka)
             {
                 int momentalnaVrednost = cena - (2 * (cena - (godinaNaProizvodstvo / 100) * potrosuvacka));
                 return momentalnaVrednost;
